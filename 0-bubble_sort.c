@@ -6,12 +6,12 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, j, tmp;
+	size_t i = 0, j, tmp;
 
 	if (size < 2 ||  array == NULL)
 		return;
 
-	for (i = 0; i < size - 1; i++)
+	while (i < size)
 	{
 		for (j = 0; j < size - 1 - i; j++)
 		{
@@ -23,5 +23,6 @@ void bubble_sort(int *array, size_t size)
 				print_array(array, size);
 			}
 		}
+		i++;
 	}
 }
