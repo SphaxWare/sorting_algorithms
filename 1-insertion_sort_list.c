@@ -13,19 +13,19 @@ void insertion_sort_list(listint_t **list)
 	while(tmp)
 	{
 		temp = tmp;
-		while(temp != NULL && temp->prev != NULL)
+		tmp = tmp->next;
+		while(temp && temp->prev)
 		{
-			if ( temp->prev->n > temp->n)
+			if (temp->prev->n > temp->n)
 			{
 				swaper(temp->prev, temp);
-				if (temp->prev != NULL)
+				if (!temp->prev)
 					*list = temp;
 				print_list((const listint_t *)*list);
 			}
 			else
 				temp = temp->prev;
 		}
-		tmp = tmp->next;
 	}
 }
 /**
