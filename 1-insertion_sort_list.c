@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
- * insertion_sort - sort an array
+ * insertion_sort_list - sort an array
  * @list: list
  */
 void insertion_sort_list(listint_t **list)
@@ -10,11 +10,11 @@ void insertion_sort_list(listint_t **list)
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 	tmp = (*list)->next;
-	while(tmp)
+	while (tmp)
 	{
 		temp = tmp;
 		tmp = tmp->next;
-		while(temp && temp->prev)
+		while (temp && temp->prev)
 		{
 			if (temp->prev->n > temp->n)
 			{
@@ -29,7 +29,7 @@ void insertion_sort_list(listint_t **list)
 	}
 }
 /**
- * insertion_sort - sort an array
+ * swaper - swap two nodes
  * @previous: node
  * @current: node
  */
