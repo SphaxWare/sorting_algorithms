@@ -14,6 +14,8 @@ void quick_sort(int *array, size_t size)
  * swap - swaps two integers
  * @x: first integer
  * @y: second integer
+ * @array: the array
+ * @size: size of array
  */
 void swap(int *x, int *y, int *array, size_t size)
 {
