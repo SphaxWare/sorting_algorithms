@@ -36,4 +36,7 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 void merge_sort(int *array, size_t size);
 void top_down(int *array, size_t start, size_t stop, int *n);
 void compare(int *array, size_t start, size_t stop, int *n);
+void simple_swap(int *x, int *y);
+void maxHeapify(int *array, size_t size, int idx, size_t n);
+void heap_sort(int *array, size_t size);
 #endif
