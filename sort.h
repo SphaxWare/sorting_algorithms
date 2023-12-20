@@ -33,4 +33,7 @@ void cocktail_sort_list(listint_t **list);
 listint_t *node_swaper(listint_t *node, listint_t **list);
 void counting_sort(int *array, size_t size);
 void *_calloc(unsigned int nmemb, unsigned int size);
+void merge_sort(int *array, size_t size);
+void top_down(int *array, size_t start, size_t stop, int *n);
+void compare(int *array, size_t start, size_t stop, int *n);
 #endif
