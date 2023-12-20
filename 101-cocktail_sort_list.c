@@ -5,7 +5,7 @@
  */
 void cocktail_sort_list(listint_t **list)
 {
-	int swapped = 0;
+	int swapped = 1;
 	listint_t *temp;
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
@@ -18,7 +18,6 @@ void cocktail_sort_list(listint_t **list)
 			if (temp->n > temp->next->n)
 			{
 				temp = node_swaper(temp->next, list);
-				print_list((const listint_t *)*list);
 				swapped = 1;
 			}
 			if (temp->next != NULL)
@@ -32,10 +31,9 @@ void cocktail_sort_list(listint_t **list)
 			if (temp->prev->n > temp->n)
 			{
 				temp = node_swaper(temp, list);
-				print_list((const listint_t *)*list);
 				swapped = 1;
 			}
-			if (temp->prev != NULL)
+			else
 				temp = temp->prev;
 		}
 	} while (swapped);
@@ -60,5 +58,6 @@ listint_t *node_swaper(listint_t *node, listint_t **list)
 		current->prev->next = current;
 	else
 		*list = current;
+	print_list((const listint_t *)*list);
 	return (current);
 }
