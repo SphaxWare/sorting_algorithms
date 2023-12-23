@@ -3,6 +3,10 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
+
+#define UP 1
+#define DOWN 0
 
 /**
  * struct listint_s - Doubly linked list node
@@ -43,4 +47,8 @@ void print_array(const int *array, size_t size);
 int getMax(int *arr, int n);
 void countSort(int *arr, size_t n, int exp, int *output);
 void radix_sort(int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
+void bitonic_seq(int *array, size_t size, size_t start, size_t seq, char flow);
+void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
+		char flow);
 #endif
