@@ -55,7 +55,7 @@ void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
 		for (i = start; i < start + jump; i++)
 		{
 			if ((flow == UP && array[i] > array[i + jump]) ||
-			    (flow == DOWN && array[i] < array[i + jump]))
+					(flow == DOWN && array[i] < array[i + jump]))
 				simple_swap(array + i, array + i + jump);
 		}
 		bitonic_merge(array, size, start, jump, flow);
@@ -69,7 +69,7 @@ void bitonic_merge(int *array, size_t size, size_t start, size_t seq,
  */
 void simple_swap(int *x, int *y)
 {
-        int temp = *x;
-        *x = *y;
-        *y = temp;
+	int temp = *x;
+	*x = *y;
+	*y = temp;
 }
